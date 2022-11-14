@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.password.text.toString()
             doSignUp(userEmail, password)
         }
-    }
+    }//시발 깃허브 ㅈㄴ 좆같네
 
     private fun doLogin(userEmail: String, password: String) {
         Firebase.auth.signInWithEmailAndPassword(userEmail, password)
