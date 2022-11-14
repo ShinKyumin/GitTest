@@ -55,6 +55,10 @@ class MainActivity : AppCompatActivity() {
 
             // write to logcat
             Log.d(MyFirebaseMessagingService.TAG, "FCM token: ${binding.textFCMToken.text}")
+
+            if(intent.hasExtra("message")) {
+                binding.MessageText.text = intent.getStringExtra("message")
+            }
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
