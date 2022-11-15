@@ -20,6 +20,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         Log.d(TAG, "Message data payload: ${remoteMessage.data}")
         val msgBody = remoteMessage.notification?.body
         Log.d(TAG, "Message Notification Body: $msgBody")
+        println(msgBody)
 
         Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
